@@ -267,7 +267,7 @@ class Parser(object):
         timestamp = struct.unpack("d", data[:8])[0]
         image_group_data = array.array("H", data)
         image_data_start = 4 + channel_offset
-        image_group_data = stitched.remove_parsed_unwanted_bytes(image_group_data, image_data_start, height, width)
+        #image_group_data = stitched.remove_parsed_unwanted_bytes(image_group_data, image_data_start, height, width)
 
         # The images for the various channels are interleaved within the same array. For example, the second image
         # of a four image group will be composed of bytes 2, 6, 10, etc. If you understand why someone would design
