@@ -22,9 +22,8 @@ class ND2Reader(FramesSequenceND):
         """
         super(ND2Reader, self).__init__()
 
-        
-
         self.filename = ""
+
         if isinstance(fh, str):
             if not fh.endswith(".nd2"):
                 raise InvalidFileType(
